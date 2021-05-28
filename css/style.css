@@ -1,0 +1,154 @@
+@charset "utf=8";
+@import url('https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap');
+
+* { padding: 0; margin: 0; box-sizing: border-box; }
+a { color: inherit; text-decoration: none; }
+img { vertical-align: middle; }
+.blind { position: absolute; width: 1px; height: 1px; overflow: hidden; text-indent: -99999px; }
+input, button { 
+    border: none; background: none; font-family: inherit; border-radius: 0; 
+    font-size: inherit; color: inherit;
+}
+button { cursor: pointer;}
+h1, h2 { font-weight: normal; }
+
+body { font-family: 'Yeon Sung', cursive; }
+
+#mobile {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: #000;
+    color: #fff; font-size: 24px;
+}
+#mobile > p { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);}
+
+@media screen and ( max-width:768px ) {
+    #mobile {display: none;}
+}
+
+#section .header { 
+    display: flex; justify-content: space-between;
+    padding: 20px;
+    box-shadow: 0 0 5px #999;
+}
+#section .header > p { 
+    font-weight: bold;
+}
+
+#section .contentBox {
+    padding: 0 20px; 
+}
+#section .contentBox .title { 
+    text-align: center;
+    padding: 50px 0 30px;
+    border-bottom: 1px solid #999;
+}
+#section .contentBox .title h1 { 
+    padding: 30px 0; font-size: 28px;
+}
+#section .contentBox .title > p:nth-of-type(2) {
+    width: 100%; height: 30px; position: relative;
+}
+#section .contentBox .title > p:nth-of-type(2) > span {
+    width: 30px; height: 30px; background: forestgreen;
+    position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+    border-radius: 50px;
+}
+
+#section .contentBox .content { 
+    padding: 50px 0 20px; text-align: center;
+    border-bottom: 1px solid #999;
+    line-height: 1.8;
+}
+#section .contentBox .content ul {
+    padding: 30px 20px 0 40px; color: #555;
+}
+#section .contentBox .content .last { 
+    padding-top: 50px; text-align: left;
+    color: #999;
+}
+
+#section .contentBox .bottom {
+    padding: 20px 0; display: flex; font-size: 24px;
+}
+#section .contentBox .bottom > p > i {
+    padding-right: 10px;
+    cursor: pointer;
+}
+/* #section .contentBox .bottom > p > i.on {
+    display: block;
+} */
+
+
+
+
+/* 댓글 */
+#section .commentBox .list {
+    padding: 30px 20px 10px;
+}
+#section .commentBox .list li { 
+    display: flex; justify-content: space-between;
+}
+#section .commentBox .list li > div:nth-child(2) { 
+    display: flex; justify-content: space-between;
+    width: 30%; color: #999;
+}
+
+#section .commentBox .inputBox { 
+    position: fixed; bottom: 100px; left: 20px; right: 20px;
+    display: flex; align-items: center;
+    border: 1px solid forestgreen; font-size:18px;
+}
+#section .commentBox .inputBox #txt { 
+    width: 80%; height: 40px; padding: 10px;
+}
+#section .commentBox .inputBox button { 
+    width: 20%; height: 40px; background: forestgreen;
+    color: #fff;
+}
+
+
+#section .snsbg {
+    position: fixed; bottom: 0; left: 0; right: 0; top: 0;
+    background: rgba(0, 0, 0, 0); transition: all 0.5s;
+    z-index: -1;
+}
+#section .snsbg.on {
+    background: rgba(0, 0, 0, 0.5);
+
+}
+
+#section .snslogin { 
+    position: fixed; bottom: 150px; left: 20px; right: 20px;
+}
+#section .snslogin,
+#section .snslistbox .snslist {
+    list-style: none;
+}
+#section .snslogin .h3 { 
+    background: #ddd; padding: 5px 10px;
+}
+#section .snslistbox {
+    text-align: center; padding:50px 20px; background: #fff;
+    position: fixed; bottom: -100%; left: 0; right: 0;
+    transition: all 0.5s;
+}
+#section .snslistbox.on {
+    bottom: 0;
+}
+#section .snslistbox h2 { padding-bottom: 40px;}
+#section .snslistbox h2 span { color: red; font-weight: bold;}
+#section .snslistbox .snslist li {
+    font-size: 20px; padding: 5px 0;
+}
+#section .snslistbox .snslist li > a { 
+    background: #44b25d; display: block;
+    padding: 10px; color: #fff; border-radius: 30px;
+}
+#section .snslistbox .snslist li:nth-child(2) > a { background: #f5df2c; color: #000; }
+#section .snslistbox .snslist li:nth-child(3) > a { background: #395591; }
+#section .snslistbox .snslist li:nth-child(4) > a { background: #4679bd; }
+#section .snslistbox .snslist li:nth-child(5) > a { background: #3496d4; }
+#section .snslistbox button {
+    margin-top: 20px;
+}
